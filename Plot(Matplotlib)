@@ -1,0 +1,55 @@
+%pylab
+
+
+''' Matplotlib basics
+
+normal plot - using red circles(we put "r-o" in the plot function to use red dots)
+diff examples - "b-o"- blue colour with circles
+              - "r-^" - red colour with triangles and so on..
+              - different colours are green - "g", Cyan - "c", Magenta = "m" etc
+                 '''
+
+x = linspace(0, 2 * pi, 40)
+y = sin(x)
+
+plot(x,y, 'r-o')
+
+'''normal scattered plot - we use a scatter function which helps us to scatter the plot'''
+
+x = linspace(0, 2 * pi, 40)
+y = sin(x)
+
+scatter(x,y)
+
+
+''' colored scatter plot with a color bar '''
+
+x = rand(2000)
+y = rand(2000)
+size = rand(200) * 3
+color = rand(200)
+
+scatter(x, y, size, color)
+colorbar()
+
+''' plotting subplots - here we make use of subplot which has attributes - row, coloumn, active plot
+                        we can change the no of rows and coloumns as per our choice'''
+
+x = array([1, 2, 3, 4,1,3])
+y = array([2, 3,1,2,3])
+
+subplot(2, 1, 1)
+plot(x)
+
+subplot(2, 1, 2)
+plot(y)
+
+''' Adding labels, titles and grids to a plot'''
+
+x = array([2,2, 4, 5,6])
+y = array([3,4, 6, 7, 8])
+
+plot(x, y, label = 'number plotting')
+legend()
+title(numbers)
+grid()
